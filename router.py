@@ -5,4 +5,8 @@ from app.views.users import views
 def index():
     return views.index()
 
+@app.route('/new',methods=['GET'])
+def new():
+    return views.new()
+
 
