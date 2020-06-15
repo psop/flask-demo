@@ -1,5 +1,5 @@
 from flask import render_template, request
-from app.models.users import User, _create, _update
+from app.models.users import User, _create, _update, _destroy
 
 class views:
     def index():
@@ -23,4 +23,8 @@ class views:
     def update(id):
         email = request.form['email']
         _update(id,email)
+        return
+
+    def destroy(id):
+        _destroy(id)
         return

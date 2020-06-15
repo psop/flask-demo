@@ -21,3 +21,8 @@ def edit(id):
 def update(id):
     views.update(id)
     return "User update sucessful!"
+
+@app.route('/<int:id>/delete',methods=['POST'])
+def destroy(id):
+    views.destroy(id)
+    return "User deleted!"

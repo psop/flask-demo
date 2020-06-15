@@ -16,3 +16,9 @@ def _update(id,email):
     user.email = email
     db.session.commit()
     return
+
+def _destroy(id):
+    user = User.query.filter_by(id=id).first()
+    db.session.delete(user)
+    db.session.commit()
+    return
