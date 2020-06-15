@@ -16,6 +16,10 @@ class views:
         # call back
         return "User creation sucessful!"
 
+    def show(id):
+        user = User.query.filter_by(id=id).first()
+        return render_template('users/show.html',user=user)
+
     def edit(id):
         user = User.query.filter_by(id=id).first()
         return render_template('users/edit.html',user=user)

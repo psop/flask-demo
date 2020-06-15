@@ -13,6 +13,10 @@ def new():
 def create():
     return views.create()
 
+@app.route('/<int:id>',methods=['GET'])
+def show(id):
+    return views.show(id)
+
 @app.route('/<int:id>/edit',methods=['GET'])
 def edit(id):
     return views.edit(id)
