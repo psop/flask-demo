@@ -16,3 +16,8 @@ def create():
 @app.route('/<int:id>/edit',methods=['GET'])
 def edit(id):
     return views.edit(id)
+
+@app.route('/<int:id>',methods=['POST'])
+def update(id):
+    views.update(id)
+    return "User update sucessful!"
