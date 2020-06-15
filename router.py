@@ -9,4 +9,6 @@ def index():
 def new():
     return views.new()
 
-
+@app.route('/create',methods=['POST'])
+def create():
+    return views.create()
