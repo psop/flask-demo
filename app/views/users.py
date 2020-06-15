@@ -6,6 +6,7 @@ class views:
         return render_template('users/index.html')
 
     def new():
+        user = User()
         return render_template('users/new.html')
 
     def create():
@@ -14,3 +15,7 @@ class views:
         _create(username, email)
         # call back
         return "User creation sucessful!"
+
+    def edit(id):
+        user = User.query.filter_by(id=id).first()
+        return render_template('users/edit.html',user=user)

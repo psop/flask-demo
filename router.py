@@ -12,3 +12,7 @@ def new():
 @app.route('/create',methods=['POST'])
 def create():
     return views.create()
+
+@app.route('/<int:id>/edit',methods=['GET'])
+def edit(id):
+    return views.edit(id)
