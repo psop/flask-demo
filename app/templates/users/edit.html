@@ -2,7 +2,7 @@
 {% block body %}
 <p> {{ user.username }} </p>
 <!--Update user info-->
-<form action="/1" method="POST">
+<form action="{{ url_update }}" method="POST">
     <label for="email">email</label>
     <input type="text" name="email" value=""><br>
     <input type="submit" value="submit">

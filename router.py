@@ -20,8 +20,9 @@ def show(id):
 
 @app.route('/<int:id>/edit',methods=['GET'])
 def edit(id):
+    url_update = url_for("update", id=id)
     url_delete = url_for("destroy", id=id)
-    return views.edit(id, url_delete = url_delete)
+    return views.edit(id, url_update = url_update, url_delete = url_delete)
 
 @app.route('/<int:id>',methods=['POST'])
 def update(id):
