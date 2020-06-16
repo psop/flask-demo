@@ -9,7 +9,7 @@
 </form>
 
 <!--Delete user info-->
-<form action="/1/delete" method="POST">
+<form action="{{ url_delete }}" method="POST">
     <label for="email">Delete</label>
     <input type="hidden" name="email" value=""><br>
     <input type="submit" value="click me to delete">

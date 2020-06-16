@@ -20,9 +20,9 @@ class views:
         user = User.query.filter_by(id=id).first()
         return render_template('users/show.html',user=user)
 
-    def edit(id):
+    def edit(id, url_delete):
         user = User.query.filter_by(id=id).first()
-        return render_template('users/edit.html',user=user)
+        return render_template('users/edit.html',user=user, url_delete=url_delete)
 
     def update(id):
         email = request.form['email']
